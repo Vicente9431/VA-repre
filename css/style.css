@@ -217,15 +217,20 @@ header.scrolled .brand{font-size:1.15rem;}
   display:block; font-size:.8rem; font-weight:700; letter-spacing:.06em;
   text-transform:uppercase; color:#cfcfcf; margin-bottom:18px;
 }
-.hbm-balloons{display:flex; flex-wrap:wrap; gap:10px; justify-content:center;}
+.hbm-balloons{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
 .balloon{
-  display:inline-flex; align-items:center; gap:5px;
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  gap:8px; text-align:center;
   background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.28);
-  color:#fff; font-size:.85rem; font-weight:500;
-  padding:9px 16px; border-radius:999px;
+  color:#fff; font-size:.72rem; font-weight:500; line-height:1.3;
+  padding:12px 8px; border-radius:12px;
   transition:transform .15s ease, background .15s ease;
 }
-.balloon b{font-weight:800;}
+.balloon img{
+  height:22px; width:auto; max-width:80%; object-fit:contain;
+  background:#fff; border-radius:6px; padding:5px 8px;
+}
+.balloon b{font-weight:800; display:block;}
 .balloon:hover{background:#fff; color:var(--navy); transform:translateY(-2px);}
 
 /* ---------- Hero icon watermark (large-format brand icon on the cover) ---------- */
